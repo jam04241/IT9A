@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-sm{
+    background-color: aquamarine;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+a, .cancel-btn{
+    text-decoration: none;
+    color: white;
+}

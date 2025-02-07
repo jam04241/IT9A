@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    margin-bottom: 20vh;
+}
+
+.container{
+    background-color: bisque;
+
+}
+
+.aizen{
+    width: 200px;
+    align-self: center;
+}
