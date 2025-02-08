@@ -1,8 +1,9 @@
 <?php
 
 // Include database connection file
-include'database/connectdb.php';
+include 'connectdb.php';
 
+try{
 // Check if form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $student_id = $_POST['student_id'];
@@ -32,11 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssssss", $fname, $mid_ini, $lname, $course, $department, $bdate, $status, $student_id);
     $stmt->execute();
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Record updated successfully'); window.location='/index.php';</script>";
-    } else {
-        echo "Error updating record: " . $conn->error;
-    }
+    if ($stmt->execute()) {
+        header("Location: ../index.php");
+        exit;
+      } else {
+        echo "operation failed";
+      }
 }
 $conn->close();
+} catch(\Exception $e) {
+    echo "Error: ". $e;
+}
 ?>

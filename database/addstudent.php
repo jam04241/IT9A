@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     // Prepare the insert query
-    $stmt = $conn->prepare("INSERT INTO students_form (first_name, mid_ini, last_name, course, department,birth_year,status) VALUES (?, ?, ?, ?, ?, ?, ?);");
+    $stmt = $conn->prepare("INSERT INTO students_form (first_name, mid_ini, last_name, course, department,birth_year,Status) VALUES (?, ?, ?, ?, ?, ?, ?);");
 
     // Bind the parameters
     $stmt->bind_param("sssssss", $fname,$midini, $lname, $course, $dept, $bdate,$status);
