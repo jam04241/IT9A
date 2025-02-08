@@ -52,3 +52,11 @@
             </div>
             </div>
         </div>
+
+
+        /*<a class='btn btn-primary btn-sm' href='/edit.php?$row[student_id]'>Edit</a>*/  
+                                    
+        /*<a class='btn btn-danger btn-sm' href='?$row[student_id]'>Delete</a>*/
+
+        <a class='btn btn-primary btn-sm' href='edit.php?student_id=<?php echo $row[student_id]; ?>'>Edit</a>
+        <a class='btn btn-danger btn-sm' href='delete.php?student_id=<?php echo $row[student_id]; ?>'>Delete</a>

@@ -40,21 +40,8 @@
             <th scope="col">action</th>
             <tbody>
             <?php
-                $host = "localhost";
-                $username = "root";
-                $password = "";
-                $database = "Enrollment_Students";
-                          
-                          
-                $conn = new mysqli($host, $username, $password, $database);
-                          
-                if ($conn->connect_error) {
-                    die("Database connection unsuccessful" . $conn->connect_error);
-                          
-                }
-                
                 // echo "database connection success";
-                          
+                include"database/connectdb.php";     
                 
                 $sql = "SELECT * from students_form";
                 $result = $conn->query($sql);
@@ -76,9 +63,11 @@
                                     <td> $row[status]</td>
         
                                     <td>
-                                        <a class='btn btn-primary btn-sm' href='/edit.php?$row[student_id]'>Edit</a>     
-                                  
-                                        <a class='btn btn-danger btn-sm' href='?$row[student_id]'>Delete</a> 
+
+
+                                        <a class='btn btn-primary btn-sm' href='edit.php?student_id=<?php echo $row[student_id]; ?>'>Edit</a>
+                                        <a class='btn btn-danger btn-sm' href='delete.php?student_id=<?php echo $row[student_id]; ?>'>Delete</a>
+
                                     </td>
                                 </tr>
                                 ";
@@ -87,7 +76,6 @@
                             
                                           
             ?>
-            
             </tbody>
             </table>
             <!-- Button trigger modal for BUTTON -->

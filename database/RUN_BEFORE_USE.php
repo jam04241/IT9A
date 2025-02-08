@@ -19,9 +19,9 @@ $sql = "CREATE TABLE IF NOT EXISTS students_form (
     mid_ini VARCHAR(2),
     last_name VARCHAR(50) NOT NULL,
     course VARCHAR(50) NOT NULL,
-    department VARCHAR(50) NOT NULL,
-    Status INT(11) NOT NULL,
-    birth_year DATE NOT NULL
+    department VARCHAR(50) NOT NULL,   
+    birth_year DATE NOT NULL,
+    Status INT(11) NOT NULL
 )"; 
 
 if ($conn->query($sql) === TRUE) {
@@ -34,6 +34,20 @@ if ($conn->query($sql) === TRUE) {
 $sql = "ALTER TABLE students_form AUTO_INCREMENT = 143000"; 
 if ($conn->query($sql) === TRUE) {
     echo "AUTO_INCREMENT set to 143000 successfully.<br>";
+} else {
+    die("Error setting AUTO_INCREMENT: " . $conn->error . "<br>");
+}
+
+$sql = "CREATE TABLE IF NOT EXISTS loginadmin(
+    admin_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(50) NOT NULL,
+    user VARCHAR(50) NOT NULL,
+    pass VARCHAR(255) NOT NULL,
+    verify_pass VARCHAR(50) NOT NULL
+)"; 
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table 'loginadmin' created successfully or already exists.<br>";
 } else {
     die("Error setting AUTO_INCREMENT: " . $conn->error . "<br>");
 }
