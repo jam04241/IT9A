@@ -1,6 +1,8 @@
 <?php
 
  include "database/connectdb.php";
+ include "helpers/authenticated.php";
+
 
  if(!$conn){
     die("Database connection failed: ". $conn->error);
@@ -29,7 +31,7 @@
 
         </div>
         <div class="content">
-            <div class="container-sm" style="background-color: aqua;">
+            <div class="container-sm" style="background-color: aqua; padding-bottom: 2rem;">
                 <h1 class="text-center">STUDENT ENROLLEMENT FORM</h1>
                 <!-- Button trigger modal for ADD BUTTON-->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
@@ -68,7 +70,7 @@
                                 <?=$row['department']?>
                             </td>
                             <td>
-                                <?=$row['Status']?>
+                                <?=$row['status']?>
                             </td>
                             <td>
                                 <?=$row['birth_year']?>
@@ -93,6 +95,7 @@
             </button>
             </div>
         </div> -->
+        <a href="../database/logout_handler.php" class="btn btn-danger btn-sm position-fixed bottom-0 start-0 mb-3 ms-3">Logout</a>
 
                 <!-- Modal for ADD BUTTON-->
                 <div class="modal fade" id="addmodal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -119,7 +122,7 @@
                                                     <label>Mid ini</label>
                                                     <input class="form-control" type="text" name="mid_ini" />
                                                 </div>
-                                                <div class="col-5">
+                                                <div class="col-5"> 
                                                     <label>Last Name</label>
                                                     <input class="form-control" type="text" name="lname" required />
                                                 </div>

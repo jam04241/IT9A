@@ -1,6 +1,7 @@
 <?php 
 
-include'database/loginadmin.php';
+include'helpers/not_authenticated.php';
+
 
 ?>
 <!DOCTYPE html>
@@ -31,6 +32,7 @@ include'database/loginadmin.php';
                                 <h1 class="text-center">Welcome to my Soul Society</h1>
                             </div>
                         </div>   
+
                     </div>
                 </div>
 
@@ -61,7 +63,7 @@ include'database/loginadmin.php';
                     <div class="row mb-3">
                         <div class="col">
                             <p> Dont' have account? </p>
-                            <a type="button" class="btn btn-primary" href="signup.php"> Signup </a>
+                            <a type="submit" class="btn btn-primary"> Signup </a>
                         </div>
                     </div>
                     </form>

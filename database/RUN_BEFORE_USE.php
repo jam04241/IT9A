@@ -21,7 +21,7 @@ $sql = "CREATE TABLE IF NOT EXISTS students_form (
     course VARCHAR(50) NOT NULL,
     department VARCHAR(50) NOT NULL,   
     birth_year DATE NOT NULL,
-    Status INT(11) NOT NULL
+    status ENUM('Ongoing', 'Drop', 'Done') NOT NULL
 )"; 
 
 if ($conn->query($sql) === TRUE) {

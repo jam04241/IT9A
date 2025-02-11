@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $midini = $_POST['mid_ini'];
     $lname = $_POST['lname'];
     $course = $_POST['course'];
-    $dept = 'oten';
+    $dept = $_POST['dept'];
     $status = 'Ongoing';
     $bdate = $_POST['bdate'];
 

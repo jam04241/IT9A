@@ -1,5 +1,6 @@
 <?php
 include('database/connectdb.php');
+include "helpers/authenticated.php";
 
 if(isset($_GET["student_id"])){
     $studentid = $_GET["student_id"];
@@ -25,7 +26,7 @@ $lname = $row['last_name'];
 $course = $row['course'];
 $department = $row['department'];
 $bdate = $row['birth_year'];
-$status = $row['Status'];
+$status = $row['status'];
 ?>
 
 
@@ -89,7 +90,7 @@ $status = $row['Status'];
                         </div>
                         <div class="col-sm-3">
                             <label>Birth Year</label>
-                            <input class="form-control" type="text" name="bdate" value="<?php echo $bdate?>" required />
+                            <input class="form-control" type="date" name="bdate" value="<?php echo $bdate?>" required />
                         </div>
 
                         <div class="col-sm-3 ">
@@ -97,6 +98,7 @@ $status = $row['Status'];
                             <select class="form-control" type="status" name="status" value="<?php echo $status?>"
                                 required>
                                 <option value="Ongoing">Ongoing</option>
+                                <option value="Drop">Drop</option>
                                 <option value="Done">Done</option>
                             </select>
                         </div>

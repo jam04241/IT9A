@@ -42,7 +42,7 @@ function username_exists($username)
 {
   global $conn;
 
-  $stmt = $conn->prepare("SELECT admin_id FROM users WHERE user = ?");
+  $stmt = $conn->prepare("SELECT admin_id FROM loginadmin WHERE user = ?");
   if (!$stmt) {
     return false;
   }
@@ -60,7 +60,7 @@ function create_account($username, $email, $password)
 
   $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-  $stmt = $conn->prepare("INSERT INTO login (email, user, pass, verify_pass) VALUES (?, ?, ?, ?)");
+  $stmt = $conn->prepare("INSERT INTO loginadmin (email, user, pass, verify_pass) VALUES (?, ?, ?, ?)");
   if (!$stmt) {
     return false;
   }

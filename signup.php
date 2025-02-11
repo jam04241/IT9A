@@ -2,6 +2,7 @@
 
 include'helpers/not_authenticated.php';
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,7 +66,7 @@ include'helpers/not_authenticated.php';
 
                 <div class="row mb-3">
                     <div class="col">
-                        <button type="button" class="btn btn-success"> Signup </button>
+                        <button type="submit" class="btn btn-success"> Signup </button>
                     </div>
                 </div>  
                 </form>
