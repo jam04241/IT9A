@@ -9,6 +9,6 @@ if (isset($_SESSION['access_token'])) {
   $token = $_COOKIE['access_token'];
 } else {
   // Redirect to login page if no token exists
-  header("Location: index.php");
+  header("Location: ../login.php");
   exit;
 }

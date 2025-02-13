@@ -1,6 +1,6 @@
 <?php
 include('database/connectdb.php');
-include "helpers/authenticated.php";
+//include "helpers/authenticated.php";
 
 if(isset($_GET["student_id"])){
     $studentid = $_GET["student_id"];

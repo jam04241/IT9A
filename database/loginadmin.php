@@ -1,5 +1,6 @@
 <?php
     include 'connectdb.php';
+
     session_start();
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -21,11 +22,11 @@
           // Optionally store token in a cookie
           // setcookie("access_token", $token, time() + (86400 * 7), "/", "", false, true); // Expires in 7 days
     
-          header("Location: ../views/home.php");
+          header("Location: ../index.php");
           exit;
         } else {
           $_SESSION['errors'] = "Invalid username or password!";
-          header("Location: ../index.php");
+          header("Location: ../login.php");
           exit;
         }
       }

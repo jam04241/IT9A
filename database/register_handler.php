@@ -2,10 +2,12 @@
 
 include 'connectdb.php';
 session_start();
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 $retypepass = $_POST['retypepass'];
 $email = $_POST['email'];
+
 
 try {
   if ($_SERVER['REQUEST_METHOD'] == "POST") {

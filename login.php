@@ -1,9 +1,6 @@
-<?php 
-
-include'helpers/not_authenticated.php';
+<?php include'helpers/not_authenticated.php'; ?>
 
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +60,7 @@ include'helpers/not_authenticated.php';
                     <div class="row mb-3">
                         <div class="col">
                             <p> Dont' have account? </p>
-                            <a type="submit" class="btn btn-primary"> Signup </a>
+                            <a type="submit" class="btn btn-primary" href="signup.php"> Signup </a>
                         </div>
                     </div>
                     </form>

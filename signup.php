@@ -36,7 +36,7 @@ include'helpers/not_authenticated.php';
                 <div class="col-sm-6 mb-3">
                     <i class="bi bi-person"></i>
                         <label for="username-form"> Username </label>
-                        <input type="username" class="form-control" name="username"/>
+                        <input type="username" class="form-control" name="username" required/>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@ include'helpers/not_authenticated.php';
                     <div class="col-sm-6 mb-3">
                     <i class="bi bi-person"></i>
                         <label for="username-form" > Email </label>
-                        <input type="email" class="form-control" name="email"/>
+                        <input type="email" class="form-control" name="email" required/>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ include'helpers/not_authenticated.php';
                     <div class="col-sm-6 mb-4">
                         <i class="bi bi-key"></i>
                         <label for="password-form" >Password</label>
-                        <input type="password" class="form-control" name="password"/>
+                        <input type="password" class="form-control" name="password" required/>
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@ include'helpers/not_authenticated.php';
                     <div class="col-sm-6 mb-4">
                         <i class="bi bi-key"></i>
                         <label for="password-form" >Retype Password</label>
-                        <input type="password" class="form-control" name="retypepass"/>
+                        <input type="password" class="form-control" name="retypepass" required/>
                     </div>
                 </div>
 
@@ -73,8 +73,7 @@ include'helpers/not_authenticated.php';
 
                 <div class="row mb-3">
                     <div class="col">
-                        <p> Login now </p>
-                        <a type="button" class="btn btn-primary" href="login.php">Login</a>
+                        <a type="submit" class="btn btn-primary" href="login.php">Login</a>
                     </div>
                 </div>
             </div>

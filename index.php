@@ -1,7 +1,7 @@
 <?php
 
  include "database/connectdb.php";
- include "helpers/authenticated.php";
+ //include "helpers/authenticated.php";
 
 
  if(!$conn){
